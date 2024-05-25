@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
   imports: [CommonModule]
 })
 export class LogoutComponent {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   logout(): void {
     this.authService.logout();
   }
 
-  goTasks() {
-    // this.router.navigate(['/tasks']);
+  goTasks(): void {
+    this.router.navigate(['/tasks']);
   }
 }

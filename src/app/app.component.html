@@ -160,7 +160,7 @@ c0 -17 -159 -206 -237 -282 -162 -158 -320 -252 -588 -350 -223 -82 -297 -110
 <nav>
 <!--  <a routerLink="/tasks" *ngIf="isLoggedIn()">Tasks</a>-->
 <!--  <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>-->
-  <button class="montserrat-font logout" routerLink="/logout" *ngIf="isLoggedIn()">Log out</button>
+  <button class="montserrat-font logout" routerLink="/logout" *ngIf="isLoggedIn() && showLogoutButton">Log out</button>
 </nav>
 </div>
 <router-outlet></router-outlet>
