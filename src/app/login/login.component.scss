@@ -3,7 +3,6 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 1rem;
-  border: 1px solid #ccc;
   border-radius: 4px;
   width:800px;
   height:320px;
@@ -40,6 +39,7 @@ input{
   height: 40px;
   margin-top:5px;
   cursor: default;
+  width:230px;
 }
 .login-button{
   display: flex;
@@ -58,4 +58,26 @@ button{
 }
 .create-account{
   margin-top: 10px;
+  a{
+    color: black;
+  }
+}
+.pacifico-regular {
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid black; /* Cursor */
+  animation: typing 4s steps(20, end) forwards, blink-caret 0.75s step-end 1;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 17% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
 }

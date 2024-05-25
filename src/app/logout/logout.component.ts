@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logout',
@@ -14,5 +15,9 @@ export class LogoutComponent {
 
   logout(): void {
     this.authService.logout();
+  }
+
+  goTasks() {
+    // this.router.navigate(['/tasks']);
   }
 }
