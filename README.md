@@ -136,11 +136,3 @@ src/
 ### Logging Out
 1. Click the "Logout" link in the navigation menu to log out.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## Contact
-If you have any questions or feedback, please contact us at support@taskmanager.com.
