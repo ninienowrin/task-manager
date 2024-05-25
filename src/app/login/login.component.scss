@@ -1,0 +1,61 @@
+/* login.component.scss */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width:800px;
+  height:320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-page{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:1vw;
+}
+
+.login-form{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+.username{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top:15px;
+}
+input{
+  border:none;
+  border-radius: 12px;
+  height: 40px;
+  margin-top:5px;
+  cursor: default;
+}
+.login-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:15px;
+}
+button{
+  border:none;
+  border-radius: 12px;
+  height: 40px;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-account{
+  margin-top: 10px;
+}

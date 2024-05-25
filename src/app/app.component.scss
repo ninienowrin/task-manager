@@ -1,0 +1,27 @@
+$primary-color: #28a745;
+$primary-color-hover: darken($primary-color, 10%);
+$danger-color: #dc3545;
+$danger-color-hover: darken($danger-color, 10%);
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

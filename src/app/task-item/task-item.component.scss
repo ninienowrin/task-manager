@@ -1,0 +1,37 @@
+.completed {
+  text-decoration: line-through;
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  .task-checkbox {
+    margin-right: 10px;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+
+  .delete-button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}
