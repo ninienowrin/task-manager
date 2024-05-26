@@ -55,4 +55,9 @@ export class TaskService {
     this.tasksSubject.next(tasks);
     this.updateLocalStorage(tasks);
   }
+
+  updateTasks(tasks: Task[]): void {
+    this.tasksSubject.next(tasks);
+    this.updateLocalStorage(tasks);
+  }
 }

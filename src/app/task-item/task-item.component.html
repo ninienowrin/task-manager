@@ -1,6 +1,7 @@
-<div class="task-item">
-  <input type="checkbox" [checked]="task?.completed" (change)="onToggle()" class="task-checkbox">
-  <span [class.completed]="task?.completed">{{ task?.title }}</span>
-  <button (click)="onDelete()" class="delete-button">Delete</button>
+<div class="task-item" (click)="editTask()" title="Click to Edit Task">
+  <div class="task-name">
+    <input type="checkbox" [checked]="task?.completed" (click)="onToggle($event)" class="task-checkbox">
+    <span [class.completed]="task?.completed">{{ task?.title }}</span>
+  </div>
+  <button (click)="onDelete($event)" class="delete-button">Delete</button>
 </div>
-

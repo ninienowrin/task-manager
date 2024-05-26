@@ -28,44 +28,7 @@ This project is a Task Manager application built using Angular. The application 
     ng serve
     ```
     Open your browser and navigate to `http://localhost:4200/`.
-
-## File Structure
-src/
-├── app/
-│ ├── auth.guard.ts
-│ ├── auth.service.ts
-│ ├── login/
-│ │ ├── login.component.html
-│ │ ├── login.component.scss
-│ │ └── login.component.ts
-│ ├── login.guard.ts
-│ ├── models/
-│ │ └── task.model.ts
-│ ├── register/
-│ │ ├── register.component.html
-│ │ ├── register.component.scss
-│ │ └── register.component.ts
-│ ├── services/
-│ │ └── task.service.ts
-│ ├── task-item/
-│ │ ├── task-item.component.html
-│ │ ├── task-item.component.scss
-│ │ └── task-item.component.ts
-│ ├── task-list/
-│ │ ├── task-list.component.html
-│ │ ├── task-list.component.scss
-│ │ └── task-list.component.ts
-│ ├── add-task/
-│ │ ├── add-task.component.html
-│ │ ├── add-task.component.scss
-│ │ └── add-task.component.ts
-│ ├── app.component.html
-│ ├── app.component.scss
-│ ├── app.component.ts
-│ ├── app.module.ts
-│ └── app.routes.ts
-└── index.html
-
+4. Click on Create Account to create account on your browser.
 
 
 
@@ -81,6 +44,9 @@ src/
 
 ### AddTaskComponent
 - Provides a form to add a new task.
+
+### EditTaskComponent
+- Provides a form to edit a new task when clicked on task item.
 
 ### LoginComponent
 - Provides a form for users to log in.
@@ -108,12 +74,23 @@ src/
 - Prevents authenticated users from accessing the login page.
 - Redirects authenticated users to the task list page.
 
+### TaskCompletionGuard
+- Prevents authenticated users from accessing the edit task page if the task is completed.
+- Redirects authenticated users to the task list page.
+
 ## Usage
 
 ### Adding a Task
 1. Navigate to the task list page.
 2. Use the form to enter the task details.
 3. Click the "Add Task" button to add the task to the list.
+
+### Adding a Task
+1. Navigate to the task list page.
+2. Click on a task item to edit the specific task.
+3. Use the form to enter the new task.
+4. Click on the "Save" button to update the task.
+
 
 ### Completing a Task
 1. Navigate to the task list page.

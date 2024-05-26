@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
+import { EditTaskComponent } from './edit-task/edit-task.component';
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { LoginComponent } from './login/login.component';
@@ -24,11 +26,14 @@ const appRoutes: Routes = [
     TaskListComponent,
     LoginComponent,
     LogoutComponent,
+    EditTaskComponent,
     RegisterComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,  // Required animations module
+    ToastrModule.forRoot()     // ToastrModule added
   ],
   providers: [AuthGuard, LoginGuard],
   bootstrap: [AppComponent]

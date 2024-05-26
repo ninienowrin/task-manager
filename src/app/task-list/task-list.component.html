@@ -1,11 +1,17 @@
 <div class="tasklist-container">
 
-<div class="pacifico-regular">Write your tasks...</div>
+  <div class="filters">
+    <button (click)="setFilter('all')" [class.selected]="filter === 'all'">All Tasks</button>
+    <button (click)="setFilter('completed')" [class.selected]="filter === 'completed'">Completed Tasks</button>
+    <button (click)="setFilter('remaining')" [class.selected]="filter === 'remaining'">Remaining Tasks</button>
+  </div>
 
-<div class="task-list">
-  <app-add-task></app-add-task>
-    <li *ngFor="let task of tasks">
+  <div class="pacifico-regular">Write your tasks...</div>
+
+  <div class="task-list">
+    <app-add-task></app-add-task>
+    <li *ngFor="let task of getFilteredTasks()">
       <app-task-item [task]="task" (delete)="deleteTask(task.id)" (toggle)="toggleTaskCompletion(task.id)"></app-task-item>
     </li>
-</div>
+  </div>
 </div>

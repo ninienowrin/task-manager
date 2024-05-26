@@ -13,6 +13,7 @@ import { TaskItemComponent } from '../task-item/task-item.component';
 })
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
+  filter: string = 'all'; // Default filter to show all tasks
 
   constructor(private taskService: TaskService) {}
 
@@ -20,6 +21,23 @@ export class TaskListComponent implements OnInit {
     this.taskService.tasks$.subscribe(tasks => {
       this.tasks = tasks;
     });
+  }
+
+  setFilter(filter: string) {
+    this.filter = filter;
+  }
+
+  getFilteredTasks(): Task[] {
+    switch (this.filter) {
+      case 'all':
+        return this.tasks;
+      case 'completed':
+        return this.tasks.filter(task => task.completed);
+      case 'remaining':
+        return this.tasks.filter(task => !task.completed);
+      default:
+        return this.tasks;
+    }
   }
 
   deleteTask(id: number): void {

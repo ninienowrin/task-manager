@@ -36,3 +36,18 @@
   50% { border-color: white }
 }
 
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.filters button.selected {
+  background-color: green; /* Or any other color you prefer */
+}

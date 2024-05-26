@@ -1,6 +1,11 @@
 .completed {
   text-decoration: line-through;
 }
+.task-name{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 .task-item {
   display: flex;
   align-items: center;
@@ -35,7 +40,7 @@
     background-color: red;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
 
     &:hover {
