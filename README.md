@@ -85,7 +85,7 @@ This project is a Task Manager application built using Angular. The application 
 2. Use the form to enter the task details.
 3. Click the "Add Task" button to add the task to the list.
 
-### Adding a Task
+### Editing a Task
 1. Navigate to the task list page.
 2. Click on a task item to edit the specific task.
 3. Use the form to enter the new task.
